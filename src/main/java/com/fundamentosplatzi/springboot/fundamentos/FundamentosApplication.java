@@ -17,6 +17,7 @@ public class FundamentosApplication implements CommandLineRunner {
 	private OtroBean otroBean;
 	private BeanSumarDosNros beanSumarDosNros;
 	private MiBeanConDependencia miBeanConDependencia;
+	private MyBeanWithProperties myBeanWithProperties;
 
 	public FundamentosApplication(@Qualifier("componentTwoImplement")
 								  ComponentDependency componentDependency,
@@ -25,7 +26,8 @@ public class FundamentosApplication implements CommandLineRunner {
 								  MyBeanWithDependency myBeanWithDependency,
 								  BeanSumarDosNros beanSumarDosNros,
 								  OtroBean otroBean,
-								  MiBeanConDependencia miBeanConDependencia
+								  MiBeanConDependencia miBeanConDependencia,
+								  MyBeanWithProperties myBeanWithProperties
 								  ){
 		this.componentDependency = componentDependency;
 		this.myBean = myBean;
@@ -33,6 +35,7 @@ public class FundamentosApplication implements CommandLineRunner {
 		this.otroBean = otroBean;
 		this.beanSumarDosNros = beanSumarDosNros;
 		this.miBeanConDependencia = miBeanConDependencia;
+		this.myBeanWithProperties = myBeanWithProperties;
 
 
 
@@ -49,6 +52,7 @@ public class FundamentosApplication implements CommandLineRunner {
 		otroBean.diceHola();
 		otroBean.imprime();
 		miBeanConDependencia.imprimeOperacionesMatematicas();
+		System.out.println(myBeanWithProperties.function());
 
 	}
 }
