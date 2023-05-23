@@ -20,4 +20,19 @@ public class MyConfigurationBean {
     public MyBeanWithDependency beanOperationWithDependendy(MyOperation myOperation){
         return new MyBeanWithDependencyImplement(myOperation);
     }
+
+    @Bean
+    public OtroBean beanOperationOtroBean(){
+        return new OtroBeanImplement();
+    }
+
+    @Bean
+    public BeanSumarDosNros beanOperationSumarDosNros(){
+        return new BeanSumarDosNrosImplement();
+    }
+
+    @Bean
+    public MiBeanConDependencia beanOperationconDependencia ( BeanSumarDosNros beanSumarDosNros){
+        return new MiBeanConDependenciaImplement(beanSumarDosNros);
+    }
 }
