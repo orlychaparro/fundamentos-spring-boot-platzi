@@ -1,7 +1,7 @@
 package com.fundamentosplatzi.springboot.fundamentos.entity;
 
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
-import org.springframework.data.annotation.Id;
+
+
 
 import javax.persistence.*;
 

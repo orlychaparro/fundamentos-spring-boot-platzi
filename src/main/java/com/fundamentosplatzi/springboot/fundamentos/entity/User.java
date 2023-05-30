@@ -1,6 +1,7 @@
 package com.fundamentosplatzi.springboot.fundamentos.entity;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -27,9 +28,8 @@ public class User {
     @JsonManagedReference
     private List<Post> posts = new ArrayList<>();
 
-    public User(){
+    public User(){}
 
-    }
 
     public User(String name, String email, LocalDate birthDate) {
         this.name = name;
@@ -73,10 +73,10 @@ public class User {
         return posts;
     }
 
-    public void setPosts(List<Post> posts) {
+   /* public void setPosts(List<Posts> posts) {
         this.posts = posts;
     }
-
+*/
     @Override
     public String toString() {
         return "User{" +
